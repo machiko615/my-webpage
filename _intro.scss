@@ -1,0 +1,101 @@
+.intro{
+    position: relative;
+    padding-bottom:550px;
+ 
+ @include mq('sp') {
+     padding: 20px;
+     margin-left: 0%;
+     text-align: center;
+     margin-bottom: 400px;
+ }
+ &__wrapper{
+    position: absolute;
+    top:-50px;
+    left: 0;
+    background-image: url(/img/8.png);
+    background-attachment: fixed;
+    width: 100%;
+    height:600px;
+    background-size: cover;
+    @include mq('tab') {
+        padding-bottom: 250px;
+        
+    }
+    @include mq('sp') {
+        background-image: url(/img/bg3.png);
+        background-size: cover;
+        top:-40px;
+        height:500px;
+    }
+}
+&__text{
+    padding:60px;
+    padding-right: 70px;
+    width: 70%;
+    margin-top: 130px;
+    margin-left: 10%;
+    color:$font-color;
+    background-color: rgba(255, 255, 255, 0.87);
+    @include mq('tab') {
+        margin-left: 10%;
+        width: 80%;
+        padding-right: 50px;
+        
+    }
+    @include mq('sp') {
+        background-color: rgba(255, 255, 255, 0.836);
+        padding: 20px;
+        margin-top: 100px;
+        width: 80%;
+        text-align: left;
+    }
+     h2{
+         font-size: 24px;
+         margin-bottom: 30px;
+         @include mq('tab') {
+             font-size: 18px;
+            }
+            @include mq('sp') {
+             margin-bottom: 10px;
+             padding-bottom: 10px;
+             font-size: 14px;
+         }
+     }
+     p{
+         position: relative;
+         padding-bottom: 10px;
+         margin-left: 50px;
+         font-size: 18px;
+         line-height: 1.8;
+
+         &::before{
+             content:"▶︎";
+             width: 20px;
+             height:20px;
+             top:0;
+             left:-30px;
+             position: absolute;
+             @include mq('sp') {
+                 content:"・";
+                 width: 10px;
+                 height:10px;
+                 left:-10px;
+ 
+            
+                 
+             }
+
+         }
+         @include mq('tab') {
+             font-size: 16px;
+            }
+            @include mq('sp') {
+                font-size: 10px;
+                margin-left: 0px;
+                padding-bottom: 10px;
+             
+         }
+     }
+ }
+
+}

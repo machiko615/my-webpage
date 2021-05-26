@@ -1,0 +1,45 @@
+.plan{
+    z-index: 10;
+    width: 100%;
+    background-color: $sub-color;
+    &__wrapper{
+        margin:0 auto;
+        max-width: 1200px;
+        @include mq('tab') {
+            max-width: 1000px;
+            
+        }
+        &--card{
+            display: flex;
+            justify-content: space-around;
+            @include mq('sp') {
+                display: block;
+            }
+        }
+        &--carditem{
+            box-shadow: 0 0 10px rgba(65, 65, 65, 0.459);
+            margin-top: 50px;
+            background-color: #fff;
+            width: calc(33.3% - 40px * 2 / 3);
+            flex-wrap: wrap;
+            padding:20px;
+            text-align: center;
+            @include mq('sp') {
+                width: 80%;
+                margin:0 auto;
+            }
+            .item-title{
+                font-size: 24px;
+                padding-bottom: 10px;
+                border-bottom:1px dashed #000;
+            }
+            .item-price{
+                padding-top: 20px;
+                font-size: 20px;
+                text-align: left;
+            }
+
+
+        }
+    }
+}

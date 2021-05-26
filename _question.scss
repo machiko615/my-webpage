@@ -1,0 +1,40 @@
+
+.question{
+  
+  &__wrapper{
+    position: relative;
+    z-index: 100;
+    background: rgb(143, 142, 142);
+    padding:70px;
+    padding-left: 10%;
+    text-align: left;
+    margin-left: 40%;
+    @include mq('tab') {
+      margin-left: 30%;
+    }
+    @include mq('sp') {
+      padding:20px 0px;
+      padding-right: 10%;
+      margin: 0 0 0 auto;
+      text-align: right;
+      width: 90%;
+    }
+    p{
+      color:#fff;
+      font-size: 16px;
+      padding: 20px;
+      @include mq('tab') {
+        font-size: 14px;
+        padding: 10px;
+        
+      }
+      @include mq('sp') {
+        font-size: 10px;
+        padding: 10px;
+        
+        
+      }
+    }
+  }
+
+}

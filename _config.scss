@@ -1,0 +1,30 @@
+// レイアウト幅
+$layout-width-canvas: 1280px;
+$layout-width-inner: 1200px;
+
+// 余白
+$padding-pc: 24px;
+$padding-tab: 24px;
+$padding-sp: 16px;
+
+//ブレークポイント
+$breakpoints:(
+  "sp":"(max-width: 767px)",
+  "tab": "(max-width: #{$layout-width-inner + $padding-pc * 2 - 1px})",
+  "pc":"(min-width:#{$layout-width-inner})",
+);
+//メディアクエリ
+@mixin mq($breakpoint:sp){
+  @media #{map-get($breakpoints, $breakpoint)}{
+    @content;
+  }
+}
+$base-color:#BFD9E8;
+$sub-color:#E7D2D2;
+$font-color:#333333;
+$bg-color:rgb(14, 13, 13)3;
+
+
+h1{
+  font-size:20px;
+}

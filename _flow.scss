@@ -1,0 +1,75 @@
+/***ステップバーデザイン１***/
+.flow{
+  &__wrapper{
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 100px;
+    @include mq('tab') {
+        max-width: 60%;
+    }
+    @include mq('sp') {
+        max-width: 80%;
+        
+    }
+  }
+}
+.step-wrap1 {
+    counter-reset:count;
+    margin: 2em 0;
+    position: relative;
+   }
+   .step-content1 {
+    padding: 0 0 1.3em 2em;
+    margin: 0;
+    position: relative;
+    padding-bottom: 30px;
+   }
+   .step-content1::before {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 9px;
+    background: $base-color;
+    border: solid 3px #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    box-shadow: 0 0 0 2px $base-color;
+   }
+   .step-content1::after {
+    content: "";
+    display: block;
+    height: calc(100% - 35px);
+    border-left: dotted 5px #768888;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    
+   }
+   .step-title1 {
+    padding:20px;
+    font-weight: bold;
+    font-size: 150%;
+   }
+   .step-label1 {
+    color: #768888;
+    font-weight: bold;
+    font-size: 16px;
+   }
+   .step-label1::after {
+    counter-increment:count;
+    content:counter(count);
+    position: relative;
+    left: .3em;
+   }
+   .step-body1 {
+    border-bottom: dotted 2px #ddd;
+    padding:20px;
+    padding-top: 0px;
+    font-size: 16px;
+   }
+   .step-wrap1 > :last-of-type::after {
+    display: none;
+   }
+   /***ステップバーデザイン１***/

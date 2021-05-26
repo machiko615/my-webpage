@@ -1,0 +1,39 @@
+.works__wrapper{
+  padding-top: 110px;
+  padding-bottom: 90px;
+}
+.swiper-container {
+  margin:0 0 0 auto;
+  width:80%;
+  padding-bottom: 50px;
+  @include mq('sp') {
+    width:100%;
+    margin:0 auto;
+  }
+
+  
+}
+.swiper-slide{
+  img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+.swiper-pagination-bullet{
+    border-radius: 0%;
+    background-color:#000;
+    width: 15px;
+    height:5px;
+}
+
+.swiper-pagination{
+
+ text-align: left;
+ @include mq('sp') {
+   text-align: center;
+   
+ }
+}
+  
